@@ -8,9 +8,8 @@ public class Reverse {
 
         while(numbers > 0){
             int rem = numbers % 10;  // Extracting last digit
-            reverse *= 10;           // Because this adds a zero after the number then the rem added to
-                                      // that numbers appears like Reversing eg: 50 + 4 = 54
-            reverse += rem;
+            reverse = reverse * 10 + rem;               // Reverse * 10 Because this adds a zero after the number then the rem added to
+                                                       // that numbers appears like Reversing eg: 50 + 4 = 54
             numbers /= 10;
         }
 
