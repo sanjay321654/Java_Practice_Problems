@@ -5,31 +5,31 @@ public class Calculator {
     static void calculation(float num1, float num2, char symbol){
         switch (symbol){
             case '+' :
-                System.out.println("Addition of two numbers : "+(num1+num2));
+                System.out.println("\nAddition of two numbers : "+(num1+num2));
                 break;
             case '-':
-                System.out.println("Subtraction of two numbers : "+(num1-num2));
+                System.out.println("\nSubtraction of two numbers : "+(num1-num2));
                 break;
             case '*':
-                System.out.println("Multiplication of two numbers : " +(num1*num2));
+                System.out.println("\nMultiplication of two numbers : " +(num1*num2));
                 break;
             case '/':
                 if(num2 !=0) {
-                    System.out.println("Division of two numbers : " + (num1 / num2));
+                    System.out.println("\nDivision of two numbers : " + (num1 / num2));
                 }else {
-                    System.out.println("Try another Number: Division of Zero gives Infinity!! ");
+                    System.out.println("\nTry another Number: Division of Zero gives Infinity!! ");
                 }
                 break;
             case '%':
                 if(num2 !=0) {
-                    System.out.println("Remainder of two numbers : " + (num1 % num2));
+                    System.out.println("\nRemainder of two numbers : " + (num1 % num2));
                 }else {
-                    System.out.println("Try another Number: Division of Zero gives Infinity!! ");
+                    System.out.println("\nTry another Number: Division of Zero gives Infinity!! ");
                 }
 
                 break;
             default:
-                System.out.println("Invalid: Enter Operator from these symbols: +, -, *, /, % ");
+                System.out.println("\nInvalid: Enter Operator from these symbols: +, -, *, /, % ");
         }
 
 
@@ -37,11 +37,13 @@ public class Calculator {
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String Choice;
-
+        String userChoice;          //Variables declared inside a block {} are only accessible within that block.
+                                    // Once the {} is reached, the variable is destroyed.
+                                    //Because of this we declare userChoice outside the do if we declare inside the do
+                                    //then it cannot be accessible by the while.
         do {
 
-            System.out.println("Enter the first number: ");
+            System.out.println("\nEnter the first number: ");
             float input1 = scan.nextFloat();
 
             System.out.println("Enter Operator (+, -, *, /, %): ");
@@ -55,12 +57,12 @@ public class Calculator {
 
             calculation(input1, input2, input3);
 
-            System.out.println("Do you want to continue the calculation: yes or no - ");
-            Choice = scan.next().toLowerCase(Locale.ROOT);
+            System.out.println("\nDo you want to continue the calculation: yes or no - ");
+            userChoice = scan.next().toLowerCase(Locale.ROOT);
 
-        }while (Choice.equals("yes") || Choice.equals("y"));
+        }while (userChoice.equals("yes") || userChoice.equals("y"));
 
-        System.out.println("Thank You Using the Calculator!!");
+        System.out.println("\nThank You Using the Calculator!!");
 
 
 
