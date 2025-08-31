@@ -26,7 +26,7 @@ public class Armstrong {
             power = 1;
         }
         while (temp > 0){
-            power ++;      // Increment digit count
+            power ++;      // Increment power count
             temp /= 10;    // Remove last digit
 
         }
