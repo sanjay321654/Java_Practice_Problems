@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Primenumber {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("\nEnter the number to check it's prime or not: ");
+		int num = scan.nextInt();
+		
+		boolean ans = isPrime(num);
+		System.out.print(ans);
+		
+		
+	}
+	
+	static boolean isPrime(int a) {
+		
+		if(a <= 1) {
+			return false;
+		}
+		
+		int c = 2;
+		while(c * c <= a) {
+			if(a % c == 0) {
+				return false;
+			}
+			c++;
+			
+		}
+		return c * c > a;
+	}
+
+
+}
