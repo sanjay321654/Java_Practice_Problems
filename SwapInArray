@@ -18,7 +18,7 @@ public class SwapInArray {
 
         numbers[index_i] = numbers[index_i] + numbers[index_j];  // int a = a + b  33 + 55 = 88
         numbers[index_j] = numbers[index_i] - numbers[index_j];  // int b = a - b  88 - 55 = 33
-        numbers[index_i] = numbers[index_i] - numbers[index_j];  // int c = a - b  88 - 33 = 55
+        numbers[index_i] = numbers[index_i] - numbers[index_j];  // int a = a - b  88 - 33 = 55
 
     }
 }
