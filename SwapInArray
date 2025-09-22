@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class SwapInArray {
+    public static void main(String[] args) {
+        int[] arr = {11,22,33,44,55,66};
+        System.out.println(Arrays.toString(arr));
+        swap(arr, 2, 4);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void swap(int[] numbers, int index_i, int index_j){
+        // Swapping with temporary variable.
+        //int temp3 = numbers[index_i];        // temp = a
+       // numbers[index_i] = numbers[index_j];   // a = b
+        //numbers[index_j] = temp3;             // b = temp
+
+        // Swapping without temporary variable.
+
+        numbers[index_i] = numbers[index_i] + numbers[index_j];  // int a = a + b  33 + 55 = 88
+        numbers[index_j] = numbers[index_i] - numbers[index_j];  // int b = a - b  88 - 55 = 33
+        numbers[index_i] = numbers[index_i] - numbers[index_j];  // int c = a - b  88 - 33 = 55
+
+    }
+}
