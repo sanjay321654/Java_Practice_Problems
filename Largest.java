@@ -2,18 +2,17 @@ import java.util.Scanner;
 
 public class Largest {
     static void largestNumber(float num1, float num2, float num3){
-        float max = Math.max(Math.max(num1, num2), num3);
-        System.out.println("Maximum number is: "+max);
-//        if(num1 >= num2 && num1 >= num3){
-//
-//            System.out.println("Maximum Number is: "+num1);
-//        } else if (num2 >= num1 && num2 >= num3) {
-//
-//            System.out.println("Maximum Number is: "+num2);
-//        } else {
-//
-//            System.out.println("Maximum Number is: "+num3);
-//        }
+        // float max = Math.max(Math.max(num1, num2), num3);
+        // System.out.println("Maximum number is: "+max);
+           float largest = num1;
+        if(num2 > largest){
+            largest = num2;
+        }
+        if(num3 > largest){
+            largest = num3;
+        }
+
+        System.out.println("Maximum number is: "+largest);
 
 
     }
@@ -30,3 +29,4 @@ public class Largest {
 
     }
 }
+
